@@ -68,3 +68,49 @@ ramadanTime.setMonth(3,24)
 var daysSinceRamadan=(timeNow-ramadanTime)/(1000*60*60*24)
 alert(daysSinceRamadan+" days have passed since 1st Ramadan 2020")
 
+// task 10
+var timeNow =new Date();
+var refTime=new Date();
+refTime.setFullYear(2015);
+var daysSinceRef=(timeNow-refTime)/1000;
+document.write("On reference date "+timeNow+" , "+daysSinceRef+" seconds has passed since begining of 2015")
+
+document.write("<br><br><br>");
+
+// task 11
+var timeNow =new Date();
+var oneHourAgo=new Date();
+oneHourAgo.setHours(timeNow.getHours()-1)
+document.write("Current date: "+timeNow+"<br>1 hour ago it was: "+oneHourAgo)
+document.write("<br><br><br>");
+
+// task 12
+var timeNow =new Date();
+var hundredYearsBack=new Date();
+hundredYearsBack.setFullYear(timeNow.getFullYear()-100)
+document.write("Current date: "+timeNow+"<br>100 years ago it was: "+hundredYearsBack)
+
+document.write("<br><br><br>");
+
+// task 13
+var timeNow =new Date();
+var age=+prompt("Enter your age: ")
+var birthYear= new Date();
+birthYear.setFullYear(timeNow.getFullYear()-age);
+document.write("Your Birth year is "+birthYear.getFullYear())
+
+document.write("<br><br><br>");
+
+// task 14
+var timeNow =new Date();
+document.write("<h1>K-Electic bill</h1><br><br>")
+document.write("Customer name: <b>ABC customer</b><br>")
+document.write("Month: <b>"+timeNow.getMonth()+"</b><br>")
+document.write("Number of units: <b>410</b><br>")
+document.write("Charges per unit: <b>16</b><br><br>")
+var amountPayable=410*16
+var lateCharge=350
+var amountAfterDue=amountPayable+lateCharge;
+document.write("Net amount payable (within due date): <b>"+amountPayable+"</b><br>")
+document.write("Late payment surcharges: <b>"+lateCharge+"</b><br>")
+document.write("Gross amount payable: <b>"+amountAfterDue+"</b><br>")
